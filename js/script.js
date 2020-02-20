@@ -1,5 +1,7 @@
-function soma (x,y){
-    return x+ y
-}
+const fs = require('fs');
 
-console.log(soma(10,20))
+fs.readFile('pokemon.txt', (err, data) =>{
+    if(err) console.error(err);
+    console.log(data.toString());
+
+})
